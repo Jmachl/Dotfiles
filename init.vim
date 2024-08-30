@@ -52,6 +52,13 @@ autocmd bufenter * if (winnr('$') == 1 && &filetype == 'nerdtree') | q | endif
 nmap <leader>r :w<CR>:FloatermNew --autoclose=2 python3 %<CR>
 nmap <leader>b :w<CR>:FloatermNew --autoclose=2 buildozer android debug<CR>
 
+" Copy to the system clipboard
+vnoremap <C-c> "+y
+
+" Paste from the system clipboard
+nnoremap <C-v> "+p
+
+
 " Key mapping to open a split terminal window for running code
 nmap <leader>t :vsp term://bash<CR>i
 
