@@ -39,6 +39,8 @@ Plug 'junegunn/fzf.vim'
 " Terminal integration
 Plug 'voldikss/vim-floaterm'
 
+Plug 'kdheepak/lazygit.nvim'
+
 " End of plugin list
 call plug#end()
 
@@ -57,6 +59,17 @@ vnoremap <C-c> "+y
 
 " Paste from the system clipboard
 nnoremap <C-v> "+p
+
+
+nnoremap <leader>gg :LazyGit<CR>
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gb :Git checkout<Space>
+nnoremap <leader>gd :Gdiffsplit<CR>
+nnoremap <leader>gA :Git add .<CR>
+nnoremap <leader>ga :Gwrite<CR>
+nnoremap <leader>gl :Git pull<CR>
+nnoremap <leader>gp :Git push<CR>
+
 
 
 " Key mapping to open a split terminal window for running code
